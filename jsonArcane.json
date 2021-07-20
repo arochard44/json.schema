@@ -12,16 +12,17 @@
             "properties": {
                 "classe": {
                     "type": "string",
-                    "description": "Classe à laquelle le job appartient.\n ex: jobs.exec.sql.JobExtractTable pour JobExtractTable "
+                    "description": "Classe à laquelle le job appartient.\n ex: jobs.exec.sql.JobExtractTable pour JobExtractTable ",
+                    "default": "A completer"
                 },
                 "mex": {
                     "type": "string",
-                    "description": "Mex a compléter",
+                    "description": "Mex auquel le job appartient",
                     "default": "A completer"
                 },
                 "parametres": {
                     "type": "array",
-                    "description": "paramètres du job",
+                    "description": "Paramètres du job",
                     "items": {
                         "$ref": "#/definitions/Parametre"
                     }
@@ -32,7 +33,8 @@
                 "mex",
                 "parametres"
             ],
-            "title": "Grammaire Arcane"
+            "title": "Grammaire Arcane",
+            "description": "Controlleur syntaxique. Vérifie la bonne écriture de la grammaire Arcane."
         },
         "Parametre": {
             "type": "object",
