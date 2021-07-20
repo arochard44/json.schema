@@ -1,6 +1,5 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "scope": "",
     "$id": "Arcane",
     "type": "array",
     "items": {
@@ -13,8 +12,7 @@
             "properties": {
                 "classe": {
                     "type": "string",
-                    "description": "package du job",
-                    "default": "jobs.?.?"
+                    "description": "Classe à laquelle le job appartient.\n ex: jobs.exec.sql.JobExtractTable pour JobExtractTable "
                 },
                 "mex": {
                     "type": "string",
@@ -45,7 +43,6 @@
                 },
                 "valeurs": {
                     "type": "array",
-                    "default": "[\"\"]",
                     "items": {
                         "type": "string"
                     }
