@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome8Element"
+    },
+    "definitions": {
+        "Welcome8Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "classe": {
+                    "type": "string",
+                    "description": "package du job",
+                    "default": "jobs.?.?"
+                },
+                "mex": {
+                    "type": "string",
+                    "description": "Mex a compléter",
+                    "default": "A completer"
+                },
+                "parametres": {
+                    "type": "array",
+                    "description": "paramètres du job",
+                    "items": {
+                        "$ref": "#/definitions/Parametre"
+                    }
+                }
+            },
+            "required": [
+                "classe",
+                "mex",
+                "parametres"
+            ],
+            "title": "Grammaire Arcane"
+        },
+        "Parametre": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeurs": {
+                    "type": "array",
+                    "default": "[\"\"]",
+                    "items": {
+                        "type":"string"
+                    }
+                }
+            },
+            "required": [
+                "nom",
+                "valeurs"
+            ],
+            "title": "Parametre"
+        }
+    }
+}
