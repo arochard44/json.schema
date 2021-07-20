@@ -1,5 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
+    "scope": "",
+    "$id": "Arcane",
     "type": "array",
     "items": {
         "$ref": "#/definitions/Welcome8Element"
@@ -45,7 +47,7 @@
                     "type": "array",
                     "default": "[\"\"]",
                     "items": {
-                        "type":"string"
+                        "type": "string"
                     }
                 }
             },
