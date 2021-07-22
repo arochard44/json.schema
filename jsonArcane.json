@@ -57,9 +57,9 @@
         "Objet": {
             "type": "object",
             "additionalProperties": true,
-            "properties": {
-                "^(\\[a-zA-Z]\\))": {
-                    "type": "string"
+            "patternProperties": {
+                "^[a-zA-Z]":{
+                    "type":"string"
                 }
             },
             "title": "Objet"
