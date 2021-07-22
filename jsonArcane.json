@@ -58,7 +58,7 @@
             "type": "object",
             "additionalProperties": true,
             "properties": {
-                "^[a-zA-Z]": {
+                "^(\\[a-zA-Z]\\))": {
                     "type": "string"
                 }
             },
