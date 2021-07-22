@@ -1,11 +1,35 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "type": "array",
-    "items": {
-        "$ref": "#/definitions/Welcome2Element"
-    },
+    "$ref": "#/definitions/Arcane",
     "definitions": {
-        "Welcome2Element": {
+        "Arcane": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "traitement": {
+                    "$ref": "#/definitions/Traitement"
+                },
+                "parametresEnv": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ParametresEnv"
+                    }
+                },
+                "jobs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Job"
+                    }
+                }
+            },
+            "required": [
+                "jobs",
+                "parametresEnv",
+                "traitement"
+            ],
+            "title": "Grammaire Arcane"
+        },
+        "Job": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -27,7 +51,7 @@
                 "mex",
                 "parametres"
             ],
-            "title": "Grammaire Arcane"
+            "title": "Job"
         },
         "Parametre": {
             "type": "object",
@@ -63,6 +87,44 @@
                 }
             },
             "title": "Objet"
+        },
+        "ParametresEnv": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeur": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "nom",
+                "valeur"
+            ],
+            "title": "ParametresEnv"
+        },
+        "Traitement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "idTraitement": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "mexTraitement": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "idTraitement",
+                "mexTraitement"
+            ],
+            "title": "Traitement"
         }
     }
 }
