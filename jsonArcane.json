@@ -1,28 +1,22 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "Arcane",
+    "$schema": "http://json-schema.org/draft-06/schema#",
     "type": "array",
     "items": {
-        "$ref": "#/definitions/Welcome8Element"
+        "$ref": "#/definitions/Welcome2Element"
     },
     "definitions": {
-        "Welcome8Element": {
+        "Welcome2Element": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "classe": {
-                    "type": "string",
-                    "description": "Classe à laquelle le job appartient.\n ex: jobs.exec.sql.JobExtractTable pour JobExtractTable ",
-                    "default": "A completer"
+                    "type": "string"
                 },
                 "mex": {
-                    "type": "string",
-                    "description": "Mex auquel le job appartient",
-                    "default": "A completer"
+                    "type": "string"
                 },
                 "parametres": {
                     "type": "array",
-                    "description": "Paramètres du job",
                     "items": {
                         "$ref": "#/definitions/Parametre"
                     }
@@ -33,8 +27,7 @@
                 "mex",
                 "parametres"
             ],
-            "title": "Grammaire Arcane",
-            "description": "Controlleur syntaxique. Vérifie la bonne écriture de la grammaire Arcane."
+            "title": "Welcome2Element"
         },
         "Parametre": {
             "type": "object",
@@ -48,13 +41,35 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "objets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Objet"
+                    }
                 }
             },
             "required": [
-                "nom",
-                "valeurs"
+                "nom"
             ],
             "title": "Parametre"
+        },
+        "Objet": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "masqueSequence": {
+                    "type": "string"
+                },
+                "masqueAppairage": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "masqueAppairage",
+                "masqueSequence"
+            ],
+            "title": "Objet"
         }
     }
 }
