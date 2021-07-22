@@ -58,11 +58,9 @@
             "type": "object",
             "additionalProperties": true,
             "patternProperties": {
-                "^[a-zA-Z]":{
-                    "oneOf": [
-                      {
-                        "type": "string"
-                      }]}
+                "[a-zA-Z]":{
+                    "type":"string"
+                }
             },
             "title": "Objet"
         }
