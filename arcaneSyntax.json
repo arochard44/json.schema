@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "classe": {
+                    "type": "string"
+                },
+                "mex": {
+                    "type": "string"
+                },
+                "parametres": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Parametre"
+                    }
+                }
+            },
+            "required": [
+                "classe",
+                "mex",
+                "parametres"
+            ],
+            "title": "Welcome2Element"
+        },
+        "Parametre": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeurs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "objets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Objet"
+                    }
+                }
+            },
+            "required": [
+                "nom"
+            ],
+            "title": "Parametre"
+        },
+        "Objet": {
+            "type": "object",
+            "additionalProperties": true,
+            "patternProperties": {
+                "[a-zA-Z]+":{
+                    "type":"string"
+                }
+            },
+            "title": "Objet"
+        }
+    }
+}
