@@ -58,7 +58,7 @@
             "type": "object",
             "additionalProperties": true,
             "properties": {
-                "items": {
+                "^[a-zA-Z]+": {
                     "type": "string"
                 }
             },
