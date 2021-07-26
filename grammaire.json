@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$ref": "#/definitions/Arcane",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome7",
     "definitions": {
-        "Arcane": {
+        "Welcome7": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -12,7 +12,7 @@
                 "parametresEnv": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ParametresEnv"
+                        "$ref": "#/definitions/Welcome7ParametresEnv"
                     }
                 },
                 "jobs": {
@@ -27,7 +27,7 @@
                 "parametresEnv",
                 "traitement"
             ],
-            "title": "Grammaire Arcane"
+            "title": "Welcome7"
         },
         "Job": {
             "type": "object",
@@ -39,6 +39,12 @@
                 "mex": {
                     "type": "string"
                 },
+                "parametresEnv": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/JobParametresEnv"
+                    }
+                },
                 "parametres": {
                     "type": "array",
                     "items": {
@@ -49,7 +55,8 @@
             "required": [
                 "classe",
                 "mex",
-                "parametres"
+                "parametres",
+                "parametresEnv"
             ],
             "title": "Job"
         },
@@ -80,15 +87,39 @@
         },
         "Objet": {
             "type": "object",
-            "additionalProperties": true,
-            "patternProperties": {
-                "[a-zA-Z]+":{
-                    "type":"string"
+            "additionalProperties": false,
+            "properties": {
+                "masqueSequence": {
+                    "type": "string"
+                },
+                "masqueAppairage": {
+                    "type": "string"
                 }
             },
+            "required": [
+                "masqueAppairage",
+                "masqueSequence"
+            ],
             "title": "Objet"
         },
-        "ParametresEnv": {
+        "JobParametresEnv": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeur": {
+                    "type": "string"
+                },
+                "fichier": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "JobParametresEnv"
+        },
+        "Welcome7ParametresEnv": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -103,7 +134,7 @@
                 "nom",
                 "valeur"
             ],
-            "title": "ParametresEnv"
+            "title": "Welcome7ParametresEnv"
         },
         "Traitement": {
             "type": "object",
