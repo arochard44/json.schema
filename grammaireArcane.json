@@ -1,0 +1,161 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome7",
+    "definitions": {
+        "Welcome7": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "traitement": {
+                    "$ref": "#/definitions/Traitement"
+                },
+                "parametresEnv": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Welcome7ParametresEnv"
+                    }
+                },
+                "jobs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Job"
+                    }
+                }
+            },
+            "required": [
+                "jobs",
+                "parametresEnv",
+                "traitement"
+            ],
+            "title": "Welcome7"
+        },
+        "Job": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "classe": {
+                    "type": "string"
+                },
+                "mex": {
+                    "type": "string"
+                },
+                "parametresEnv": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/JobParametresEnv"
+                    }
+                },
+                "parametres": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Parametre"
+                    }
+                }
+            },
+            "required": [
+                "classe",
+                "mex",
+                "parametres"
+            ],
+            "title": "Job"
+        },
+        "Parametre": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeurs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "objets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Objet"
+                    }
+                }
+            },
+            "required": [
+                "nom"
+            ],
+            "title": "Parametre"
+        },
+        "Objet": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "masqueSequence": {
+                    "type": "string"
+                },
+                "masqueAppairage": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "masqueAppairage",
+                "masqueSequence"
+            ],
+            "title": "Objet"
+        },
+        "JobParametresEnv": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeur": {
+                    "type": "string"
+                },
+                "fichier": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "JobParametresEnv"
+        },
+        "Welcome7ParametresEnv": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "nom": {
+                    "type": "string"
+                },
+                "valeur": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "nom",
+                "valeur"
+            ],
+            "title": "Welcome7ParametresEnv"
+        },
+        "Traitement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "idTraitement": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "mexTraitement": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "idTraitement",
+                "mexTraitement"
+            ],
+            "title": "Traitement"
+        }
+    }
+}
+
