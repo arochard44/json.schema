@@ -109,7 +109,7 @@
                     "type": "string"
                 },
                 "valeur": {
-                    "$type":"string,integer,number"
+                    "type": ["number" , "integer" , "boolean" , "null" , "string"]
                 },
                 "fichier": {
                     "type": "string"
@@ -126,7 +126,7 @@
                     "type": "string"
                 },
                 "valeur": {
-                    "type": "string"
+                    "type": ["number" , "integer" , "boolean" , "null" , "string"]
                 }
             },
             "required": [
