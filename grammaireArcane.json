@@ -108,9 +108,7 @@
                 "nom": {
                     "type": "string"
                 },
-                "valeur": {
-                    "type": "string"
-                },
+                "valeur": {},
                 "fichier": {
                     "type": "string"
                 }
@@ -158,4 +156,3 @@
         }
     }
 }
-
