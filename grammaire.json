@@ -12,7 +12,7 @@
                 "parametresEnv": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ArcaneGrammaire"
+                        "$ref": "#/definitions/Parametre"
                     }
                 },
                 "jobs": {
