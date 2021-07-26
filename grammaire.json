@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$ref": "#/definitions/Arcane",
+    "$ref": "#/definitions/ArcaneGrammaire",
     "definitions": {
-        "Arcane": {
+        "ArcaneGrammaire": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -12,7 +12,7 @@
                 "parametresEnv": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Welcome7ParametresEnv"
+                        "$ref": "#/definitions/ArcaneGrammaire"
                     }
                 },
                 "jobs": {
@@ -27,7 +27,7 @@
                 "parametresEnv",
                 "traitement"
             ],
-            "title": "Welcome7"
+            "title": "ArcaneGrammaire"
         },
         "Job": {
             "type": "object",
@@ -111,7 +111,7 @@
             "required": [],
             "title": "JobParametresEnv"
         },
-        "Welcome7ParametresEnv": {
+        "ArcaneParametresEnv": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -126,7 +126,7 @@
                 "nom",
                 "valeur"
             ],
-            "title": "Welcome7ParametresEnv"
+            "title": "ArcaneParametresEnv"
         },
         "Traitement": {
             "type": "object",
