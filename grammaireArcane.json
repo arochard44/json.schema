@@ -69,7 +69,7 @@
                 "valeurs": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": ["number" , "integer" , "boolean" , "null" , "string"]
                     }
                 },
                 "objets": {
