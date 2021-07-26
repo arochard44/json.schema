@@ -108,7 +108,9 @@
                 "nom": {
                     "type": "string"
                 },
-                "valeur": {},
+                "valeur": {
+                    "$type":"string,integer,number"
+                },
                 "fichier": {
                     "type": "string"
                 }
