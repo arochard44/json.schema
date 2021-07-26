@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome7",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$ref": "#/definitions/Arcane",
     "definitions": {
-        "Welcome7": {
+        "Arcane": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -86,19 +86,12 @@
         },
         "Objet": {
             "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "masqueSequence": {
-                    "type": "string"
-                },
-                "masqueAppairage": {
-                    "type": "string"
+            "additionalProperties": true,
+            "patternProperties": {
+                "[a-zA-Z]+":{
+                    "type":"string"
                 }
             },
-            "required": [
-                "masqueAppairage",
-                "masqueSequence"
-            ],
             "title": "Objet"
         },
         "JobParametresEnv": {
