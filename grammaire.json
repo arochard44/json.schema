@@ -55,8 +55,7 @@
             "required": [
                 "classe",
                 "mex",
-                "parametres",
-                "parametresEnv"
+                "parametres"
             ],
             "title": "Job"
         },
